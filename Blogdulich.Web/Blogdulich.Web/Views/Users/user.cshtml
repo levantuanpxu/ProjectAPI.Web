@@ -1,0 +1,65 @@
+﻿@model List<User>
+
+@{ Layout = "~/Views/Shared/_LayoutDashboard.cshtml"; }
+<div>
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Contact List</h2>
+        </div>
+
+        <div class="col-6">
+            <a asp-controller="Users" asp-action="Create" class="btn btn-primary">
+                Create New Blog
+            </a>
+        </div>
+    </div>
+
+    @if (Model.Count() > 0)
+    {
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+               Gmail
+            </th>
+                                        
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td width="20%">
+        @item.Name
+    </td>
+    <td width="20%">
+        @item.Gmail
+    </td>
+    @*<td width="20%">
+        <img class="img-responsive fit-image" style="width:150px;text-align:center" src="/images/@blog.ImageUrl" alt="Alternate Text" />
+    </td>
+    <td width="10%">
+        @blog.Category.CategoryName
+    </td>*@
+    <td width="20%">
+        <div>
+            <a asp-controller="Users" asp-action="Edit" asp-route-Id="@item.UserId" class="btn btn-primary">Edit</a>
+            <a asp-controller="Users" asp-action="Delete" asp-route-Id="@item.UserId" class="btn btn-danger">Delete</a>
+        </div>
+    </td>
+
+</tr>                }
+    </tbody>
+</table> }
+            else
+            {
+<p>Không tồn tại thể loại trong database</p>}
+
+
+</div>

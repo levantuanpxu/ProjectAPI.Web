@@ -1,0 +1,79 @@
+﻿@model UpdateContact
+
+@{ Layout = "~/Views/Shared/_LayoutDashboard.cshtml"; }
+
+<form method="post" asp-action="Edit">
+    <div class="border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-info">Edit Blog</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Gmail"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Gmail" class="form-control" />
+                        <span asp-validation-for="Gmail" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Subject"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="Subject" class="form-control"></textarea>
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Messages"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="Messages" class="form-control"></textarea>
+                        <span asp-validation-for="Messages" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="ContactId"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="ContactId" class="form-control"></textarea>
+                        <span asp-validation-for="ContactId" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="submit" value="Update" class="btn btn-info" />
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-success">Back</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</form>

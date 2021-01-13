@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6bTOGVC9hDPTgk1BPkBX+/MrVOvX51so74q4pch0wAoOtwBE69tzl5jTE3gU1lkNjbGK45MzTAlVX82t+Zt3bA==",
+  "success": true,
+  "projectFilePath": "D:\\Blog_DuLich\\Blogdulich.Web\\Blogdulich.Web\\Blogdulich.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
